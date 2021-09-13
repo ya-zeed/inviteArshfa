@@ -30,7 +30,7 @@
 
 
     <script>
-        var name
+        var name = ""
         function changeName(){
             name = document.getElementById('name').value
         }
@@ -46,6 +46,7 @@
             console.log(name);
             download_img = function (el) {
                 ctx.fillText(name+"", 2800, 1320);
+              document.getElementById('download').download = name + '.jpg'
                 // document.getElementById('download').setAttribute('download') = document.getElementById('name').value+".jpg"
                 var image = canvas.toDataURL("image/jpg");
                 el.href = image;
