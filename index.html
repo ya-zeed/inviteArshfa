@@ -21,10 +21,10 @@
     </style>
   </head>
   <body>
-    <img id="scream" width="220" height="277" src="invite1.png" alt="The Scream" hidden>
+    <img id="scream" width="220" height="277" src="certificate.png" alt="The Scream" hidden>
 
     <input type="text" name="" id="name" onchange="changeName()">
-    <canvas id="myCanvas" width="3500" height="4500" dir="rtl" style="font-family: sukar;" hidden>
+    <canvas id="myCanvas" width="3508" height="2480" dir="rtl" style="font-family: sukar; text-align: center;" hidden>
     </canvas>
     <a id="download" download="myImage.jpg" href="" onclick="download_img(this);">Download to myImage.jpg</a>
 
@@ -42,11 +42,12 @@
             ctx.drawImage(img, 0, 0);
 
             ctx.font = "bold 150px sukar";
-            ctx.fillStyle = '#565656'
+            ctx.fillStyle = '#9B724E';
+            ctx.textAlign = 'center'
             console.log(name);
             download_img = function (el) {
               name = document.getElementById('name').value
-                ctx.fillText(name+"", 2800, 1320);
+                ctx.fillText(name+"", 1700, 1220);
               document.getElementById('download').download = name + '.jpg'
               
                 var image = canvas.toDataURL("image/jpg");
